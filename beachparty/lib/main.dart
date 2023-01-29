@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_button/animated_button.dart';
-import 'package:blurrycontainer/blurrycontainer.dart';
-//import 'package:example/page.dart';
+import 'package:rive/rive.dart';
 
 void main() {
   runApp(const MyApp());
@@ -182,23 +181,24 @@ class SecondRoute extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:<Widget>[
+          children: <Widget>[
             SizedBox(height: 20),
+            Image.asset('assets/images/beach.jpg'),
             Container(
               decoration: BoxDecoration(
-              color: Colors.lightGreen,
-              borderRadius: BorderRadius.all(Radius.circular(20)),
+                color: Colors.lightGreen,
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               margin: const EdgeInsets.all(10.0),
               width: 300.0,
               height: 250.0,
               child: Text(
-                'Beach Name: \n Clean up Date: \n Details: \n Organized by: \n',
+                'Beach Name: Hello \n Clean up Date: \n Details: \n Organized by: \n',
                 textAlign: TextAlign.center,
-                 style: TextStyle(
-                 fontSize: 20,
+                style: TextStyle(
+                  fontSize: 20,
                 ),
-            ),
+              ),
             ),
             AnimatedButton(
               child: Text(
@@ -214,7 +214,7 @@ class SecondRoute extends StatelessWidget {
               enabled: true,
             ),
           ],
-      ),
+        ),
       ),
     );
   }
