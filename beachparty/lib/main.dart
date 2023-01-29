@@ -105,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   'Beach 1',
                   style: TextStyle( fontSize: 22, color: Colors.white, fontWeight: FontWeight.w500, ),
             ),
+            color: Colors.blueGrey,
             onPressed: () {},
           ),
           AnimatedButton(
@@ -120,6 +121,32 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {},
               enabled: true,
             ), 
+            AnimatedButton(
+              child: Text(
+                'Beach 3',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              color: Colors.yellow,
+              onPressed: () {},
+              enabled: true,
+            ),
+              AnimatedButton(
+              child: Text(
+                'Beach 4',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              color: Colors.greenAccent,
+              onPressed: () {},
+              enabled: true,
+            ),  
           ],
          ),
       ),
