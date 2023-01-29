@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "555671953303",
+    "project_id": "beach-party-database",
+    "storage_bucket": "beach-party-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555671953303:android:0b0a402e1b2fa768012ed2",
+        "android_client_info": {
+          "package_name": "com.example.beachparty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555671953303-i0sh236c7sg69qn7fb2j2gocomfqv219.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjksNCIQXVDGj_4CVtaosPxyRa2m45c1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555671953303-i0sh236c7sg69qn7fb2j2gocomfqv219.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "555671953303-81bq3hnf3r6n498hl049pg8o4jpoe3ve.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.beachparty"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
