@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_button/animated_button.dart';
+import 'package:blurrycontainer/blurrycontainer.dart';
 //import 'package:example/page.dart';
 
 void main() {
@@ -178,12 +179,42 @@ class SecondRoute extends StatelessWidget {
         title: const Text('Second Route'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:<Widget>[
+            SizedBox(height: 20),
+            Container(
+              decoration: BoxDecoration(
+              color: Colors.lightGreen,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              margin: const EdgeInsets.all(10.0),
+              width: 300.0,
+              height: 250.0,
+              child: Text(
+                'Beach Name: \n Clean up Date: \n Details: \n Organized by: \n',
+                textAlign: TextAlign.center,
+                 style: TextStyle(
+                 fontSize: 20,
+                ),
+            ),
+            ),
+            AnimatedButton(
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              color: Colors.blueAccent,
+              onPressed: () {},
+              enabled: true,
+            ),
+          ],
+      ),
       ),
     );
   }
