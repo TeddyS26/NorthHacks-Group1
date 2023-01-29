@@ -80,35 +80,44 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-         child: Column(
-         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+        // Column is also a layout widget. It takes a list of children and
+        // arranges them vertically. By default, it sizes itself to fit its
+        // children horizontally, and tries to be as tall as its parent.
+        //
+        // Invoke "debug painting" (press "p" in the console, choose the
+        // "Toggle Debug Paint" action from the Flutter Inspector in Android
+        // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+        // to see the wireframe for each widget.
+        //
+        // Column has various properties to control how it sizes itself and
+        // how it positions its children. Here we use mainAxisAlignment to
+        // center the children vertically; the main axis here is the vertical
+        // axis because Columns are vertical (the cross axis would be
+        // horizontal).
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(height: 20),
-         AnimatedButton(
-          child: Text(
-                  'Beach 1',
-                  style: TextStyle( fontSize: 22, color: Colors.white, fontWeight: FontWeight.w500, ),
+            AnimatedButton(
+              child: Text(
+                'Beach 1',
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              color: Colors.blueGrey,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                );
+              },
             ),
-            color: Colors.blueGrey,
-            onPressed: () {},
-          ),
-          AnimatedButton(
+            AnimatedButton(
               child: Text(
                 'Beach 2',
                 style: TextStyle(
@@ -120,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.green,
               onPressed: () {},
               enabled: true,
-            ), 
+            ),
             AnimatedButton(
               child: Text(
                 'Beach 3',
@@ -134,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {},
               enabled: true,
             ),
-              AnimatedButton(
+            AnimatedButton(
               child: Text(
                 'Beach 4',
                 style: TextStyle(
@@ -146,16 +155,36 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.greenAccent,
               onPressed: () {},
               enabled: true,
-            ),  
+            ),
           ],
-         ),
+        ),
       ),
-    /*
+      /*
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),*/ // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back!'),
+        ),
+      ),
     );
   }
 }
